@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical_7</title>
+</head>
+
+<body>
+    <hr>
+    <p>A function is triggered when the user is pressing a key in the input field.</p>
+    <input type="text" onkeypress="myFunction()">
+    <hr>
+    <h2>JavaScript HTML Events</h2>
+    Enter your name: <input type="text" id="fname" onchange="upperCase()">
+    <p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+    <hr>
+
+    <h1 onmouseover="style.color='red'" onmouseout="style.color='black'">Mouse over and Mouse out this text</h1>
+    <hr>
+    <img src="img/img1.jpg" onload="loadImage()" width="100" height="132">
+    <hr>
+
+    Enter your name: <input type="text" onfocus="myFunction(this)">
+    <p>When the input field gets focus, a function is triggered which changes the background-color.</p>
+
+
+    <script>
+        function myFunction() {
+            alert("You pressed a key inside the input field");
+        }
+
+        function upperCase() {
+            const x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+        }
+
+        function loadImage() {
+            alert("Image is loaded");
+        }
+
+        function myFunction(x) {
+            x.style.background = "yellow";
+        }
+    </script>
+
+</body>
+
+</html>
