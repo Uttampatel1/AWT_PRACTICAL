@@ -5,8 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practical_8</title>
+    
 </head>
 <body>
-    
+   
+   <input type="text" id="rows" placeholder="Enter Rows"> <br>
+   <input type="text" id="cols" placeholder="Enter Cols"> <br>
+   <input type="button" value="genrate table" id="btn1">
+   <script>
+    var rows = document.getElementById("rows");
+    var cols = document.getElementById("colums");
+    var btn = document.getElementById("btn1");
+ 
+    btn.addEventListener("click",()=>{
+        document.write("<table border='2' width='70%' >");
+            for(i=0;i<rows.value;i++){
+                document.write("<tr>");
+                for(j=0;j<cols.value;j++){
+                    document.write("<td>"+"["+i+"]"+"["+j+"]"+ "</td>");
+                    
+                }
+                document.write("</tr>");
+                
+            }
+            document.write("</table>");
+    });
+
+   </script>
 </body>
+
 </html>

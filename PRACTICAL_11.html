@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Practical_11</title>
+
+</head>
+
+<body id="mybody">
+    
+    </select>
+    <script>
+        let mybody = document.getElementById('mybody');
+        var arry = ['red', 'green', 'black', 'pink', 'yellow', 'blue'];
+        var i=0;
+        function bg_colors(){
+            mybody.style.backgroundColor = arry[i];
+            i++;
+            if(i==arry.length){
+                i=0;
+            }
+        }
+        setInterval(bg_colors,1000);
+    </script>
+</body>
+
+</html>

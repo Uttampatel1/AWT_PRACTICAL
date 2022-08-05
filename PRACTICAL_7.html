@@ -8,42 +8,47 @@
     <title>Practical_7</title>
 </head>
 
-<body>
-    <hr>
-    <p>A function is triggered when the user is pressing a key in the input field.</p>
-    <input type="text" onkeypress="myFunction()">
-    <hr>
-    <h2>JavaScript HTML Events</h2>
-    Enter your name: <input type="text" id="fname" onchange="upperCase()">
-    <p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
-    <hr>
-
-    <h1 onmouseover="style.color='red'" onmouseout="style.color='black'">Mouse over and Mouse out this text</h1>
-    <hr>
-    <img src="img/img1.jpg" onload="loadImage()" width="100" height="132">
-    <hr>
-
-    Enter your name: <input type="text" onfocus="myFunction(this)">
-    <p>When the input field gets focus, a function is triggered which changes the background-color.</p>
-
+<body id="my body">
+    <img src="img/mouseout.jpg" alt="" id="img1" width="300px" height="200px"><br>
+    <br><br>
+    products : <select name="" id="products">
+        <option value="price" disabled selected hidden>select the products</option>
+        <option value="22000">TV</option>
+        <option value="70000">LAPTOP</option>
+        <option value="100000">AC</option>
+        <option value="80000">REFRIGERATOR</option>
+    </select><br>
+    price : <input type="text" name="" id="price"><br>
+    Quantity : <input type="text" name="" id="Quantity"><br>
+    Total Amount : <input type="text" name="" id="Total Amount"><br>
+    Feedback : <input type="text" name="" id="feedback">
 
     <script>
-        function myFunction() {
-            alert("You pressed a key inside the input field");
-        }
+        var img1 = document.getElementById("img1");
+        var mybody = document.getElementById("my body");
+        var products = document.getElementById("products");
+        var price = document.getElementById("price");
+        var Quantity = document.getElementById("Quantity");
+        var TotalAmount = document.getElementById("Total Amount");
+        var feedback = document.getElementById("feedback");
+        img1.addEventListener("mouseover", () => {
+            img1.src = "img/mousein.jpg"
+        });
+        img1.addEventListener("mouseout", () => {
+            img1.src = "img/mouseout.jpg"
+        });
 
-        function upperCase() {
-            const x = document.getElementById("fname");
-            x.value = x.value.toUpperCase();
-        }
+        products.addEventListener("change", () => {
+            price.value = products.value
+        });
+        TotalAmount.addEventListener("focus", () => {
+            TotalAmount.value = Quantity.value * price.value
+        });
+        feedback.addEventListener("keypress", () => {
+            alert("Thank you");
+        });
 
-        function loadImage() {
-            alert("Image is loaded");
-        }
 
-        function myFunction(x) {
-            x.style.background = "yellow";
-        }
     </script>
 
 </body>
