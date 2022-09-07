@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical_12</title>
+</head>
+<body>
+    <p id="pi">SILVER OAK UNIVERSCITY</p>
+    <script>
+        var i = 16;
+        var p1 = document.getElementById("pi");
+        p1.style.color = "blue";
+        var a = setInterval(()=>{
+            p1.style.fontSize = i+"px";
+            i = i +4;
+            if ( i >= 50){
+                clearInterval(a);
+            }
+        },1000);
+    </script>
+</body>
+</html>
