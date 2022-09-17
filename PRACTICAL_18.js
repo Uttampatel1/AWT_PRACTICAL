@@ -69,4 +69,43 @@ http.createServer(function (req, res) {
             res.end(data);
         });
     }
+    else if(req.url === "/Practical_11"){
+        fs.readFile("Practical_11.html",(err, data)=>{
+            if (err) throw err;
+            res.end(data);
+        });
+    }
+    else if(req.url === "/Practical_12"){
+        fs.readFile("Practical_12.html",(err, data)=>{
+            if (err) throw err;
+            res.end(data);
+        });
+    }
+    else if(req.url === "/Practical_13"){
+        fs.readFile("Practical_13.html",(err, data)=>{
+            if (err) throw err;
+            res.end(data);
+        });
+    }
+    else if(req.url === "/Practical_14"){
+        fs.readFile("Practical_14.html",(err, data)=>{
+            if (err) throw err;
+            res.end(data);
+        });
+    }
+    else if(req.url === "/Practical_15"){
+        fs.readFile("Practical_15.html",(err, data)=>{
+            if (err) throw err;
+            res.end(data);
+        });
+    }
+    else if(req.url === "/Practical_16"){
+        fs.readFile("Practical_16.html",(err, data)=>{
+            if (err) throw err;
+            res.end(data);
+        });
+    }
+    else{
+        res.end("404 PAGE NOT FOUND");
+    }
 }).listen(8081);
